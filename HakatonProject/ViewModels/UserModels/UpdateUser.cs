@@ -5,14 +5,8 @@ using System.Threading.Tasks;
 
 namespace HakatonProject.ViewModels.UserModels
 {
-    public class Registration
+    public class UpdateUser
     {
-        public string Email { get; set; }
-
         public string Description { get; set; }
-
-        public string Password { get; set; }
-
-        public string ConfirmPassword { get; set; }
     }
 }

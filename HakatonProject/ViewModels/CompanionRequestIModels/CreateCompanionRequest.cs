@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace HakatonProject.ViewModels.CompanionRequestIModels
 {
-    public class CreateRequest
+    public class CreateCompanionRequest
     {
     }
 }
