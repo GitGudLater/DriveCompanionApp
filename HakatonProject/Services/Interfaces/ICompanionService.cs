@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace HakatonProject.Services.Interfaces
 {
-    interface ICompanionService
+     public interface ICompanionService
     {
     }
 }

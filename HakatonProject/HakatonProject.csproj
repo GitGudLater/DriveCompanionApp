@@ -27,6 +27,7 @@
 
   <ItemGroup>
     <Folder Include="Models\" />
+    <Folder Include="Services\Exceptions\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
