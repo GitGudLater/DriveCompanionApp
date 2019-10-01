@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 
 
-namespace HakatonProject.Models
+namespace HakatonProject.EntityModels
 {
     public class User//:IdentityUser
     {
@@ -20,5 +20,11 @@ namespace HakatonProject.Models
         //Companion entity(many-to-one)
         public UserCar UserCar { get; set; }
 
+        public ICollection<CompanionRequest> CompanionRequest { get; set; }
+
+        public User()
+        {
+            CompanionRequest = new List<CompanionRequest>();
+        }
     }
 }

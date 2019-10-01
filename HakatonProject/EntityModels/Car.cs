@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace HakatonProject.Models
+namespace HakatonProject.EntityModels
 {
     public class Car
     {
@@ -22,9 +22,13 @@ namespace HakatonProject.Models
 
         public ICollection<UserCar> UserCar { get; set; }
 
+        public ICollection<CompanionRequest> CompanionRequest { get; set; }
+
         public Car()
         {
             UserCar = new List<UserCar>();
+
+            CompanionRequest = new List<CompanionRequest>();
         }
 
     }

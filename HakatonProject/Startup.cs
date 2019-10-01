@@ -8,7 +8,7 @@ using Microsoft.Extensions.Hosting;
 //using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using HakatonProject.Models;
+using HakatonProject.EntityModels;
 
 namespace HakatonProject
 {

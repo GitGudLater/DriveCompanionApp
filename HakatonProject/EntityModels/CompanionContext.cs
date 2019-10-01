@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 
-namespace HakatonProject.Models
+namespace HakatonProject.EntityModels
 {
     public class CompanionContext:DbContext
     {
@@ -42,6 +42,16 @@ namespace HakatonProject.Models
             modelBuilder.Entity<Car>()
                 .HasOne(p => p.Week)
                 .WithOne(b => b.Car);
+
+            modelBuilder.Entity<CompanionRequest>()
+                .HasOne(p => p.Car)
+                .WithMany(b => b.CompanionRequest)
+                .HasForeignKey(k => k.CarId);
+
+            modelBuilder.Entity<CompanionRequest>()
+                .HasOne(p => p.User)
+                .WithMany(b => b.CompanionRequest)
+                .HasForeignKey(k => k.UserId);
         }
 
 
