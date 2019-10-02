@@ -7,6 +7,7 @@ namespace HakatonProject.ViewModels.CarModels
 {
     public class CarInformation
     {
+        public int CarId { get; set; }
         public string CoordStart { get; set; }
         public string CoordFin { get; set; }
         public string TBegin { get; set; }
