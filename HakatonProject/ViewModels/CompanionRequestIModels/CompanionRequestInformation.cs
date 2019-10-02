@@ -5,9 +5,12 @@ using System.Threading.Tasks;
 
 namespace HakatonProject.ViewModels.CompanionRequestIModels
 {
-    public class CreateCompanionRequest
+    public class CompanionRequestInformation
     {
-        public int CarId { get; set; }
+
+        public string CompanionDescription { get; set; }
+        public string CarOwnerDescription { get; set; }
+        public string CarDescription { get; set; }
         public string Description { get; set; }
     }
 }

@@ -7,5 +7,7 @@ namespace HakatonProject.ViewModels.CompanionRequestIModels
 {
     public class DeleteCompanionRequest
     {
+        public int CarId { get; set; }
+        public string Description { get; set; }
     }
 }
