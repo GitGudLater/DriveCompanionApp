@@ -91,5 +91,21 @@ namespace HakatonProject.Controllers
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return Ok();
         }
+
+        [HttpGet("userInformation")]
+        public async Task<UserInformation> GetUserInformation([FromBody] string userEmail)
+        {
+            User user = await db.Users.FirstOrDefaultAsync(u => u.Email == userEmail);
+            UserInformation information = new UserInformation() { Id = user.Id, Email = user.Email, Description = user.Description };
+            return information;
+        }
+
+        [HttpGet("companionInfromation")]
+        public async Task<CompanionInformation> GetCompanionInformation([FromBody] string userEmail)
+        {
+            User user = await db.Users.FirstOrDefaultAsync(u => u.Email == userEmail);
+            CompanionInformation information = new CompanionInformation() { Id = user.Id, Email = user.Email, UserDescription = user.Description };
+            return information;
+        }
     }
 }
